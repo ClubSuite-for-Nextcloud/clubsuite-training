@@ -21,10 +21,10 @@ Erfordert ClubSuite Core.]]></description>
     <author>Stefan Schulz</author>
     <namespace>ClubSuiteTraining</namespace>
     <category>organization</category>
-    <website>https://github.com/clubsuite/clubsuite-training</website>
-    <bugs>https://github.com/clubsuite/clubsuite-training/issues</bugs>
-    <repository type="git">https://github.com/clubsuite/clubsuite-training.git</repository>
-    <screenshot>https://raw.githubusercontent.com/clubsuite/clubsuite-training/main/screenshots/calendar.png</screenshot>
+    <website>https://github.com/ClubSuite-for-Nextcloud/clubsuite-training</website>
+    <bugs>https://github.com/ClubSuite-for-Nextcloud/clubsuite-training/issues</bugs>
+    <repository type="git">https://github.com/ClubSuite-for-Nextcloud/clubsuite-training.git</repository>
+    <screenshot>https://raw.githubusercontent.com/ClubSuite-for-Nextcloud/clubsuite-training/main/screenshots/calendar.png</screenshot>
     <dependencies>
         <nextcloud min-version="28" max-version="32" />
         <php min-version="8.1" max-version="8.3" />
