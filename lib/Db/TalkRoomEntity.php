@@ -7,14 +7,14 @@ declare(strict_types=1);
 namespace OCA\ClubSuiteTraining\Db;
 
 use OCP\AppFramework\Db\Entity;
-use DateTime;
+use DateTimeImmutable;
 use JsonSerializable;
 
 class TalkRoomEntity extends Entity implements JsonSerializable {
     protected int $eventId;
     protected string $roomToken;
     protected ?string $roomUrl = null;
-    protected ?DateTime $createdAt = null;
+    protected ?DateTimeImmutable $createdAt = null;
 
     public function __construct() {
         $this->addType('eventId', 'integer');
@@ -56,6 +56,6 @@ class TalkRoomEntity extends Entity implements JsonSerializable {
     public function getRoomUrl(): ?string { return $this->roomUrl; }
     public function setRoomUrl(?string $url): void { $this->roomUrl = $url; }
     
-    public function getCreatedAt(): ?DateTime { return $this->createdAt; }
-    public function setCreatedAt(?DateTime $dt): void { $this->createdAt = $dt; }
+    public function getCreatedAt(): ?DateTimeImmutable { return $this->createdAt; }
+    public function setCreatedAt(?DateTimeImmutable $dt): void { $this->createdAt = $dt; }
 }

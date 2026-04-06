@@ -13,7 +13,7 @@ use OCP\Http\Client\IClientService;
 use OCP\IConfig;
 use OCP\IURLGenerator;
 use Psr\Log\LoggerInterface;
-use DateTime;
+use DateTimeImmutable;
 use Exception;
 
 /**
@@ -79,7 +79,7 @@ class TalkRoomService {
                 'eventId' => $eventId,
                 'roomToken' => $roomToken,
                 'roomUrl' => $roomUrl,
-                'createdAt' => new DateTime(),
+                'createdAt' => new DateTimeImmutable(),
             ]);
 
             $saved = $this->mapper->insert($talkRoom);

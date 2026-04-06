@@ -11,7 +11,7 @@ use OCA\ClubSuiteTraining\Db\AttendanceEntity;
 use OCP\Http\Client\IClientService;
 use OCP\IConfig;
 use Psr\Log\LoggerInterface;
-use DateTime;
+use DateTimeImmutable;
 use Exception;
 
 class AttendanceService {
@@ -53,7 +53,7 @@ class AttendanceService {
             'userId' => $userId,
             'status' => 'present',
             'memberId' => $memberId,
-            'checkedInAt' => new DateTime(),
+            'checkedInAt' => new DateTimeImmutable(),
         ]);
         $created = $this->mapper->create($a);
 
@@ -71,7 +71,7 @@ class AttendanceService {
             throw new Exception('Attendance record not found');
         }
         $a->setStatus('present');
-        $a->setCheckedOutAt(new DateTime());
+        $a->setCheckedOutAt(new DateTimeImmutable());
         return $this->mapper->update($a);
     }
 

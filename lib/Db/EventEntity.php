@@ -7,7 +7,6 @@ declare(strict_types=1);
 namespace OCA\ClubSuiteTraining\Db;
 
 use OCP\AppFramework\Db\Entity;
-use DateTime;
 use JsonSerializable;
 
 class EventEntity extends Entity implements JsonSerializable {
